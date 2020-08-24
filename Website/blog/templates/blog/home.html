@@ -1,0 +1,39 @@
+
+{%extends 'blog/base.html'%}
+{%block body%}
+	<div id="fh5co-main">
+			<div class="fh5co-intro text-center">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<h1 class="intro-lead">Welcome to Everything Godly</h1>
+							<p class="">Christian Women Movement!</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+{%for item in database%}
+	<div id="fh5co-portfolio">
+		<div class="fh5co-portfolio-item ">
+			<div class="fh5co-portfolio-figure animate-box" style="background-image: url(images/work_1.jpg);"></div>
+			<div class="fh5co-portfolio-description">
+					<h2>{{item.title}}</h2>
+					<div class="">by {{item.author}} on {{item.date}} </a> </div>
+					<p>{{item.content}}</p>
+					<p><a href="#" class="btn btn-primary">Read the casetudy</a></p>
+			</div>
+		</div>
+	<div class="fh5co-portfolio-item fh5co-img-right">
+		<div class="fh5co-portfolio-figure animate-box" style="background-image: url(images/work_2.jpg);"></div>
+			<div class="fh5co-portfolio-description">
+				<h2>{{item.title}}</h2>
+				<div class="">by {{item.author}} on {{item.date}} </a> </div>
+				<p>{{item.content}}</p>
+				<p><a href="#" class="btn btn-primary">Read the casetudy</a></p>
+			</div>
+		</div>	
+{%endfor%}
+{%endblock body%}
+
+
+	
