@@ -12,13 +12,13 @@
 					</div>
 				</div>
 			</div>
-{%for item in database%}
+{%for item in database %}
 	<div id="fh5co-portfolio">
 		<div class="fh5co-portfolio-item ">
 			<div class="fh5co-portfolio-figure animate-box" style="background-image: url(images/work_1.jpg);"></div>
 			<div class="fh5co-portfolio-description">
 					<h2>{{item.title}}</h2>
-					<div class="">by {{item.author}} on {{item.date}} </a> </div>
+					<div class="">by {{item.author}} on {{item.date|date:'F d, Y'}} </a> </div>
 					<p>{{item.content}}</p>
 					<p><a href="#" class="btn btn-primary">Read the casetudy</a></p>
 			</div>
