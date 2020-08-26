@@ -8,9 +8,9 @@ def register(request):
 		form = UserRegistrationForm(request.POST)
 		if form.is_valid():
 			form.save()
-			username = form.clean_data.get('username')
+			username = form.cleaned_data.get('username')
 			messages.success(request, f'{username}, your account has been created successfully!')
-			return redirect('/success/')
+			return redirect('blog-home')
 	else:
 		form = UserRegistrationForm()
 	return render(request, 'users/register.html', {'form':form})

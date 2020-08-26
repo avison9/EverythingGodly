@@ -1943,6 +1943,13 @@ pre code {
   padding-left: 25px;
   padding-right: 25px;
 }
+
+.form-container{
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .container:before, .container:after {
   content: " ";
   display: table;
@@ -8258,5 +8265,6 @@ a > img.fh5co-align-center {
   margin-left: auto;
   margin-right: auto;
 }
+
 
 /*# sourceMappingURL=style.css.map */
