@@ -4,24 +4,18 @@
 
 	<div class="container">
 		
-		<form action="{% url 'user-registration' %}" method="POST">
+		<form action="{% url 'login' %}" method="POST">
 			{% csrf_token %}
 			{{ form|crispy }}
 
-			<input type="submit" value="Submit">
+			<input type="submit" value="Login">
 		</form>
 		<div>
 			<small>
-				Already have an account? <a href="{% url 'login' %}">Login Here</a>
+				Need an account? <a href="{% url 'user-registration' %}">Sign Up Here!</a>
 			</small>
 		</div>
 	</div>
 
 	
 {% endblock body %}
-
-
-
-
-
-
