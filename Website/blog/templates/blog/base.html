@@ -41,8 +41,12 @@
 							<ul class="nav navbar-nav navbar-right">
 								<li class="active"><a href="{%url 'blog-home'%}"><span>Home <span class="border"></span></span></a></li>
 								<li><a href="{%url 'blog-about'%}"><span>About Us <span class="border"></span></span></a></li>
-								<li><a href="#"><span>Register <span class="border"></span></span></a></li>
-								<li><a href="#"><span>Login <span class="border"></span></span></a></li>
+								{% if user.is_authenticated %}
+									<li><a href="{% url 'logout' %}"><span>Logout<span class="border"></span></span></a>
+								{% else %}
+									<li><a href="{% url 'user-registration' %}"><span>Register<span class="border"></span></span></a></li>
+									<li><a href="{% url 'login' %}"><span>Login<span class="border"></span></span></a></li>
+								{% endif %}
 							</ul>
 						</div>
 					</div>
