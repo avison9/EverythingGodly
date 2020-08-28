@@ -26,6 +26,7 @@ from .models import post
 
 
 def home(request):
+	
 	content = {'database': post.objects.all(), 'tag':'Welcome!'}
 	return render(request,'blog/home.html',content)
 
